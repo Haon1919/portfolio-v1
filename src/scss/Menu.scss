@@ -1,0 +1,105 @@
+.menu-container{
+   display: none;
+}
+
+@media only screen and (min-width: 380px){
+    .menu-container:hover{
+        .b1, .b2, .b3{
+            transition: .5s;
+            background-color: rgb(255, 200, 61);        }
+    }
+    
+    .menu-container{
+        top: 26px;
+        position: absolute;
+        display: inline-block;
+        left: 93vw;
+    
+        .menu-body{
+            position: fixed;
+            width: 0;
+            overflow-x: hidden;
+            right: 0;
+            top: -6px;
+            height: 100vh;
+            a{
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #282828;
+                display: block;
+                transition: 0.4s;
+            }
+        }
+    
+        .menu-body-transform{
+            padding: 0;
+            position: fixed;
+            background-color: #282828;
+            width: 20%;
+            overflow-x: hidden;
+            top: -6px;
+            right: 0;
+            height: 100vh;
+            :first-child{
+                margin-top: 35%;
+            }
+            a{
+                padding: 8px 8px 50px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: white;
+                display: block;
+                transition: 0.4s;
+            }
+            a:hover{
+                padding: 8px 8px 50px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: rgb(255, 200, 61);
+                display: block;
+                transition: 0.4s;
+            }
+        }
+        //hamburger menu pieces
+        div{
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+    }
+    
+    //hamburger menu transformations
+    .b1-transform{
+        z-index: 1;
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+    
+    .b2-transform{
+        z-index: 1;
+        opacity: 0;
+    } 
+    
+    .b3-transform{
+        z-index: 1;
+        transform: rotate(45deg) translate(-8px, -8px);
+    }   
+}
+
+    // .b1-transform:hover{
+    //     background-color: rgb(255, 200, 61);
+    // }
+
+    .b1-transform:hover ~ .b3-transform{
+        background-color: rgb(255, 200, 61);
+    }
+
+    // .b3-transform:hover{
+    //     background-color: rgb(255, 200, 61);
+    // }
+
+    .b3-transform:hover ~ .b1-transform{
+        background-color: rgb(255, 200, 61);
+    }

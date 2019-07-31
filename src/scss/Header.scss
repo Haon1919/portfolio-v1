@@ -1,0 +1,58 @@
+.header{
+    background-color: #282828;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    width: 100%;
+    height: 93px;
+    z-index:3;
+    h1{
+        color: white;
+        position: relative;
+        text-align: center;
+        bottom: .2em;
+        font-size: 45px;
+    }
+}
+
+@media only screen and (min-width: 380px){
+    .header{
+        background-color: #282828;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+        transition: 0.4s;
+        h1{
+            color: white;
+            position: relative;
+            text-align: center;
+            bottom: .2em;
+            font-size: 45px;
+            transition: 0.4s;
+        }
+    }
+    
+    .header-transform{
+        background-color:rgba(0,0,0,0.4);
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+        height: 20%;
+        transition: 0.4s;
+        h1{
+            transition: 0.4s;
+            color: rgba(255,255,255, .5);
+            position: relative;
+            text-align: center;
+            bottom: .2em;
+        }
+    }
+}
+    
